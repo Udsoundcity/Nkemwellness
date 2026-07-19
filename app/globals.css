@@ -1,0 +1,70 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    @apply bg-paper text-ink antialiased;
+  }
+  ::selection {
+    @apply bg-accent-soft text-accent-hover;
+  }
+  :focus-visible {
+    outline: 2px solid #E4572E;
+    outline-offset: 2px;
+  }
+  /* Offset anchor scrolling so content doesn't hide under the sticky header */
+  #order-form,
+  #how-it-works,
+  #reviews,
+  #faq {
+    scroll-margin-top: 84px;
+  }
+}
+
+@layer components {
+  .btn {
+    @apply inline-flex items-center justify-center gap-2 rounded-full px-6 py-3.5 font-semibold text-[15px] transition-all duration-150 active:scale-[0.97] disabled:opacity-50 disabled:pointer-events-none;
+  }
+  .btn-primary {
+    @apply btn bg-accent text-white shadow-card hover:bg-accent-hover;
+  }
+  .btn-secondary {
+    @apply btn bg-white text-ink border border-line hover:border-ink/30;
+  }
+  .btn-ghost {
+    @apply btn bg-transparent text-ink hover:bg-black/5;
+  }
+  .field-label {
+    @apply block text-sm font-medium text-ink mb-1.5;
+  }
+  .field-input {
+    @apply w-full rounded-xl border border-line bg-white px-4 py-3 text-[15px] text-ink placeholder:text-muted focus:border-accent focus:ring-2 focus:ring-accent-soft outline-none transition-colors;
+  }
+  .card {
+    @apply rounded-2xl border border-line bg-white shadow-card;
+  }
+  .eyebrow {
+    @apply text-xs font-semibold uppercase tracking-[0.14em] text-accent;
+  }
+  .section-title {
+    @apply font-display text-2xl sm:text-3xl font-extrabold tracking-tight text-center;
+  }
+  .container-page {
+    @apply mx-auto max-w-3xl px-5;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  * {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+  }
+}
