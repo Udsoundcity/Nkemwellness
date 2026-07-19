@@ -26,7 +26,7 @@ export default async function ThankYouPage({ searchParams }) {
       </h1>
 
       <p className="mt-3 max-w-md text-[15px] leading-relaxed text-muted">
-        Your order for <span className="font-semibold text-ink">{productName}</span> has been received.
+        Your order for <span className="font-semibold text-ink">{productName}</span> has been received..
       </p>
 
       {orderId && (
