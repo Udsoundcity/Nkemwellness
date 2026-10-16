@@ -9,7 +9,7 @@ export default async function PrivacyPolicyPage() {
 
   return (
     <main className="container-page py-14">
-      <h1 className="font-display text-2xl font-extrabold tracking-tight mb-6">Privacy Policy</h1>
+      <h1 className="font-display text-2xl font-extrabold tracking-tight mb-6">Privacy Policy!</h1>
       <div className="whitespace-pre-line text-[15px] leading-relaxed text-muted">{data.privacy_policy}</div>
     </main>
   );
